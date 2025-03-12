@@ -20,7 +20,7 @@ export class PipeComponent {
   currentTime : Observable<Date> = new Observable<Date>;
 
   student: any = {
-    name:'Chetan',
+    name:'vini',
     city:'Pune',
     empId:323,
     state: undefined

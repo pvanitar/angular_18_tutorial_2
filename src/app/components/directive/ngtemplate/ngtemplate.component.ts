@@ -11,7 +11,7 @@ import { Component, TemplateRef, ViewChild, ViewContainerRef } from '@angular/co
 export class NgtemplateComponent {
 
   isUserLoggedIn: boolean = false;
-  loggerUserName: string = "Chetan";
+  loggerUserName: string = "admin";
 
   @ViewChild('dyamicTem') dyanTemplate : TemplateRef<any> | undefined;
   @ViewChild('dyamicContainer', {read:ViewContainerRef}) dyanContanier : ViewContainerRef | undefined;

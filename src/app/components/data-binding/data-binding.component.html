@@ -1,49 +1,76 @@
-<div class="row">
-    <div class="col-4">
-        On Way - from .ts to .html
+<div class="container mt-5">
+    <!-- Section 1: One Way from .ts to .html -->
+    <div class="row">
+        <div class="col-12">
+            <h4>One Way - from .ts to .html</h4>
+        </div>
     </div>
-    <div class="col-4">
 
-    </div>
-    <div class="col-4">
-
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div class="row">
-            <div class="col-4 bg-success">
-                interpolation
-                <h4>{{courseName}}</h4>
-                <div> {{inputType}}</div>
-                <input type="text" value="{{courseName}}" placeholder="ENter text" />
-                <input type="{{inputType}}" />
-            </div>
-            <div class="col-4">
-                Property Binding
-                <div  [class]="myClassName">Danger</div>
-                <input type="text" [value]="courseName"/>
-                <input [type]="inputType" /> 
-            </div>
-            <div class="col-4">
-                <button class="btn btn-success" (click)="showAlert('Welcome Angualr 18')">Show Welcome</button>
-                <span (click)="showAlert('thi si from span')">Click me</span>
-                <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+    <div class="row pt-3">
+        <div class="col-md-6">
+            <div class="row">
+                <!-- Interpolation Section -->
+                <div class="col-md-6 bg-success p-3 text-white">
+                    <h5>Interpolation</h5>
+                    <p>{{courseName}}</p>
+                    <div>{{inputType}}</div>
+                    <input type="text" class="form-control mb-2" value="{{courseName}}" placeholder="Enter text" />
+                </div>
+                
+                <!-- Property Binding Section -->
+                <div class="col-md-6 p-3">
+                    <h5>Property Binding</h5>
+                    <div [class]="myClassName">Danger</div>
+                    <input type="text" class="form-control mb-2" [value]="courseName"/>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-6">
-        <input type="text" [(ngModel)]="courseName"/> - {{courseName}}
-        <input type="checkbox" [(ngModel)]="isIndian"/>
-        <select [(ngModel)]="stateName">
-            <option value="">Select</option>
-            <option value="Maharashtra">Maharashtra</option>
-            <option value="Goa">Goa</option>
-            <option value="Punjab">Punjab</option>
-        </select>
+
+    <!-- Section 2: One Way from .html to .ts -->
+    <div class="row pt-4">
+        <div class="col-12">
+            <h4>One Way - from .html to .ts</h4>
+        </div>
     </div>
-    <div class="col-6">
-        <h2> {{firstName()}}</h2>
+
+    <div class="row pt-3">
+        <div class="col-md-6">
+            <div class="row">
+                <!-- Event Binding Section -->
+                <div class="col-md-4">
+                    <h5>Event Binding</h5>
+                    <button class="btn btn-success mb-2" (click)="showAlert('Welcome')">Show Welcome</button>
+                    <div><span class="text-primary" (click)="showAlert('this is from span')">Click me</span></div>
+                    <button class="btn btn-warning mt-2" (click)="changeCourseName()">Change Course</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Two Way using [(ngModel)] -->
+    <div class="row pt-4">
+        <div class="col-12">
+            <h4>Two Way - using [(ngModel)]</h4>
+        </div>
+    </div>
+
+    <div class="row pt-3">
+        <div class="col-md-6">
+            <input type="text" [(ngModel)]="courseName" class="form-control mb-2" /> - {{courseName}}
+            <input type="checkbox" [(ngModel)]="isIndian" /> Is Indian?
+            <select [(ngModel)]="stateName" class="form-control mt-2">
+                <option value="">Select</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Goa">Goa</option>
+                <option value="Punjab">Punjab</option>
+            </select>
+        </div>
+        
+        <div class="col-md-6 pt-4">
+            <h2>{{firstName()}}</h2>
+        </div>
     </div>
 </div>
+
+

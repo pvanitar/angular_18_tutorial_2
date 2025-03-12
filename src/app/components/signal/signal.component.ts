@@ -10,19 +10,19 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, computed, signal
 })
 export class SignalComponent {
 
-  firstName = signal("Chetan");
-  lastName = signal("Jogi");
+  firstName = signal("vini");
+  lastName = signal("parmar");
 
   fullName = computed(()=> this.firstName() +" "+this.lastName())
 
-  courseName: string = "JAva";
+  courseName: string = "Angular";
 
   rollNo = signal<number>(123);
 
   cityList =  signal(["Pune",'Mumbai']);
   studentObj = signal({
-    name:'Chetan',
-    city:'Pune'
+    name:'vini',
+    city:'ahmedabad'
   })
 
 

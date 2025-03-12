@@ -11,6 +11,6 @@ export class DisableCopyDirective {
 
   @HostListener('document:copy')
   onCopy(event:ClipboardEvent) {
-    //event.preventDefault();
+    event.preventDefault();
   }
 }

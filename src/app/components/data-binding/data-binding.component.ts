@@ -14,20 +14,20 @@ export class DataBindingComponent {
 
   courseName: string = "Angular 18"; 
   stateName: string = "Goa";
-  inputType = "radio"; 
+  inputType = "checkbox"; 
   myClassName: string = "bg-primary"; 
   rollNo: number  = 123; 
   isIndian: boolean = true; 
   currentDate: Date = new Date(); 
 
-  firstName =  signal("Chetan Jogi");
+  firstName =  signal("vanita");
 
   constructor() {
      
   }
 
   changeCourseName() {
-    this.courseName = "React Js";
+    this.courseName = "Angular";
     this.firstName.set("Sachin Tendulkar")
   }
   showAlert(message: string) {

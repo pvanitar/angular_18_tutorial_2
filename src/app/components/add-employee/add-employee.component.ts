@@ -15,7 +15,6 @@ import { DisableCopyDirective } from '../../shared/disable-copy.directive';
 export class AddEmployeeComponent implements OnInit {
    
   empService = inject(EmployeeService);
-  // userList: any[]=[];
   name: string = 'Html';
 
   userList = signal<any[]>([])
@@ -27,7 +26,7 @@ export class AddEmployeeComponent implements OnInit {
   ngOnInit(): void {
     this.empService.getUsers().subscribe((res:any)=>{
       this.userList.set(res);
-      this.name = "JAVA"; 
+      this.name = "List"; 
     })
   }
  

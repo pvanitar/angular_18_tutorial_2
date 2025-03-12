@@ -9,7 +9,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular_18_tutorial';
+  title = 'dear';
 
   @HostListener('window:scroll')
   onScroll() {
@@ -17,7 +17,7 @@ export class AppComponent {
   }
   @HostListener('contextmenu')
   orRightClick(event: any) {
-   // event.preventDefault();
+   
   }
 
 
