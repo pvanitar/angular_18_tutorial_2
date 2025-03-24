@@ -30,6 +30,7 @@ export class LoginComponent {
       this.router.navigateByUrl('add-emp')
     } else {
       alert('Wrong Credentials')
+      this.router.navigateByUrl('login')
     }
   }
 
